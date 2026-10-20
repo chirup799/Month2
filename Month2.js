@@ -32,3 +32,11 @@ const filteredProducts = products.filter((product)=>{
 });
 renderProducts(filteredProducts);
 });
+searchInput.addEventListener("input",()=>{
+const searchText = searchInput.value.toLowerCase()
+const filteredProducts = products.filter((product)=>{
+    
+    return product.name.toLowerCase().includes(searchText);
+});
+renderProducts(filteredProducts);
+});
